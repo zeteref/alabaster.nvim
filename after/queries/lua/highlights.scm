@@ -7,13 +7,13 @@
 (assignment_statement
   (variable_list
     name: (dot_index_expression
-            field: (identifier) @AlabasterDefinition))
+            field: (identifier) @AlabasterDefinition (#set! priority 140)))
   (expression_list
     value: (function_definition)))
 
 (assignment_statement
   (variable_list
-    name: (identifier) @AlabasterDefinition)
+    name: (identifier) @AlabasterDefinition (#set! priority 140))
   (expression_list
     value: (function_definition)))
 
@@ -62,6 +62,9 @@
   ; Optional: exclude bracketed/quoted keys if you want
   (#not-has-parent? @AlabasterString bracketed_field))
 
+
+(function_declaration
+  name: (dot_index_expression field: (identifier) @AlabasterDefinition) (#set! priority 130))
 
 
 ;; ("local"    @mykeyword (#set! priority 140))
