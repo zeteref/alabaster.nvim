@@ -30,16 +30,20 @@ if vim.o.background == "dark" then
     local bg = "#0e1415"
     local fg = "#cecece"
     local punct_fg = "#708b8d"
-    local def_fg = "#71ade7"
+    --local def_fg = "#e5c603"
+    local def_fg = "#ffff00"
     local const_fg = "#cc8bc9"
     local active = "#cd974b"
-    local string_fg = "#95cb82"
+    --local string_fg = "#95cb82"
+    --local string_fg = "#cc6dea"
+    --local string_fg = "#ecb5fd"
+    local string_fg = "#73e255"
     local darker_fg = "#7d7d7d"
     local diffadd = "#6abf40"
     local diffdelete = "#d2322d"
     local diffchange = "#ec8013"
     local statusline = "#162022"
-    local comment = "#dfdf8e"
+    local comment = "#cc6dea"
     local dim_comment = "#696969"
     local mistake = {
         fg = "#c33c33",
@@ -100,7 +104,7 @@ if vim.o.background == "dark" then
         -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
         MoreMsg = { fg = ansi.green, bold = 1 },
         NonText = { fg = "#696969" },
-        Normal = { bg = bg, fg = fg },
+        Normal = { bg = "#293334", fg = fg },
         NormalFloat = { bg = float_bg },
         -- NormalNC     { }, -- normal text in non-current windows
         FloatBorder = floatborder,
@@ -122,15 +126,15 @@ if vim.o.background == "dark" then
         TabLineFill = { bg = statusline },
         TabLineSel = { bg = statusline, fg = ansi.blue },
         Title = { fg = const_fg },
-        Visual = { bg = "#293334" },
-        VisualNOS = { bg = "#293334" },
+        Visual = { bg = "#707e80" },
+        VisualNOS = { bg = "#707e80" },
         WarningMsg = { fg = "#e1ad4c" },
         WildMenu = { bg = "#354c50" },
         WinBar = { bg = bg, fg = ansi.white, bold = true },
         WinBarNC = { bg = bg, fg = "#7d7d7d" },
 
         --- SYNTAX I: TS groups link to these
-        Constant = { fg = const_fg },
+        Constant = { fg = fg },
         String = { fg = string_fg },
         Character = { fg = const_fg },
         Number = { fg = const_fg },
@@ -180,7 +184,8 @@ if vim.o.background == "dark" then
 
         Error = { bg = mistake.bg, fg = mistake.fg },
 
-        Todo = { bg = "#d0d058", fg = bg },
+        -- Todo = { bg = "#d0d058", fg = bg },
+        Todo = { fg = comment_fg },
 
         --- Diagnostic
         LspReferenceText = { bg = "#253437" },
@@ -198,6 +203,7 @@ if vim.o.background == "dark" then
         DiagnosticVirtualTextWarn = { bg = "#3F240A", fg = "#C8935D" },
         DiagnosticVirtualTextHint = { bg = "#1D2B37", fg = "#7E9CB9" },
         DiagnosticVirtualTextInfo = { bg = "#162C0B", fg = "#7BAC62" },
+        DiagnosticUnnecessary = { fg = "#555555" },
 
         --- Treesitter
         TSAttribute = {},
@@ -225,7 +231,8 @@ if vim.o.background == "dark" then
         TSPunctSpecial = { fg = punct_fg },
         TSRepeat = { fg = ansi.white },
         TSString = { fg = string_fg },
-        TSStringRegex = { bg = "#1d292b", fg = const_fg },
+        --TSStringRegex = { bg = "#1d292b", fg = const_fg },
+        TSStringRegex = { fg = string_fg },
         TSStringEscape = { bg = "#1d292b", fg = const_fg },
         TSSymbol = {},
         TSType = { fg = ansi.white },
@@ -247,8 +254,10 @@ if vim.o.background == "dark" then
         ["@function.builtin"] = { fg = ansi.white },
         ["@function.macro"] = { fg = ansi.white },
         ["@keyword"] = { fg = ansi.white },
+        ["@mykeyword"] = { fg = fg, bold = true },
         ["@keyword.function"] = { fg = ansi.white },
         ["@keyword.operator"] = { fg = punct_fg },
+        ["@myoperator"] = { fg = ansi.red, bold = true },
         ["@label"] = { fg = ansi.white },
         ["@method"] = { fg = ansi.white },
         ["@module"] = { fg = ansi.white },
@@ -278,7 +287,8 @@ if vim.o.background == "dark" then
         --- Theme specific
         ["@AlabasterBase"] = { fg = ansi.white },
         ["@AlabasterConstant"] = { fg = const_fg },
-        ["@AlabasterDefinition"] = { fg = def_fg },
+        ["@AlabasterDefinition"] = { fg = def_fg, bold = false },
+        ["@AlabasterVariable"] = { fg = "#5ba3d9" },
         ["@AlabasterPunct"] = { fg = punct_fg },
         ["@AlabasterString"] = { fg = string_fg },
         ["@AlabasterHashbang"] = { fg = dim_comment },
@@ -401,6 +411,7 @@ if vim.o.background == "dark" then
         ["@lsp.typemod.selfKeyword"] = { fg = fg },
         ["@lsp.typemod.struct.declaration"] = { fg = def_fg },
         ["@lsp.typemod.type.declaration"] = { fg = def_fg },
+        ["@lsp.typemod.variable.declaration"] = { link = "@AlabasterVariable" },
     }
 else
     -- terminal colors
@@ -425,7 +436,8 @@ else
     local bg = "#f7f7f7"
     local fg = "#000000"
     local punct_fg = "#777777"
-    local def_fg = "#325cc0"
+    --local def_fg = "#e5c603"
+    local def_fg = "#ffcc00"
     local const_fg = "#7a3e9d"
     local active = "#ffbc5d"
     local active_blue = "#007acc"
@@ -496,7 +508,7 @@ else
         -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
         MoreMsg = { fg = ansi.green, bold = 1 },
         NonText = { fg = "#696969" },
-        Normal = { bg = bg, fg = fg },
+        Normal = { bg = "none", fg = fg },
         NormalFloat = { bg = float_bg },
         -- NormalNC     { }, -- normal text in non-current windows
         FloatBorder = floatborder,
@@ -576,7 +588,8 @@ else
 
         Error = { bg = mistake.bg, fg = mistake.fg },
 
-        Todo = { bg = "#FFDEAA", fg = ansi.blue },
+        --Todo = { bg = "#FFDEAA", fg = ansi.blue },
+        Todo = { fg = comment_fg },
 
         --- Diagnostic
         LspReferenceText = { bg = "#dadada" },
@@ -594,6 +607,7 @@ else
         DiagnosticVirtualTextWarn = { bg = "#fff987", fg = fg },
         DiagnosticVirtualTextHint = { fg = "#0F171D", bg = "#C3D0DA" },
         DiagnosticVirtualTextInfo = { bg = "#ADFFB7", fg = "#042F09" },
+        DiagnosticUnnecessary = {},
 
         --- Treesitter
         TSAttribute = {},
@@ -644,6 +658,7 @@ else
         ["@function.builtin"] = { fg = ansi.black },
         ["@function.macro"] = { fg = ansi.black },
         ["@keyword"] = { fg = ansi.black },
+        ["@mykeyword"] = { fg = ansi.green },
         ["@keyword.function"] = { fg = ansi.black },
         ["@label"] = { fg = ansi.black },
         ["@method"] = { fg = ansi.black },
@@ -674,6 +689,7 @@ else
         --- Theme specific
         ["@AlabasterConstant"] = { fg = const_fg },
         ["@AlabasterDefinition"] = { fg = def_fg },
+        ["@AlabasterVariable"] = { fg = "#5ba3d9" },
         ["@AlabasterPunct"] = { fg = punct_fg },
         ["@AlabasterString"] = { fg = string_fg },
         ["@AlabasterHashbang"] = { fg = dim_comment },
@@ -793,6 +809,7 @@ else
         ["@lsp.typemod.selfKeyword"] = { fg = fg },
         ["@lsp.typemod.struct.declaration"] = { fg = def_fg },
         ["@lsp.typemod.type.declaration"] = { fg = def_fg },
+        ["@lsp.typemod.variable.declaration"] = { link = "@AlabasterVariable" },
     }
 end
 
