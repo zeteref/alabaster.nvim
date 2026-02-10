@@ -103,7 +103,6 @@ theme = {
   MoreMsg = { fg = ansi.green, bold = 1 },
   NonText = { fg = '#696969' },
   Normal = { bg = '#293334', fg = fg },
-  NormalBold = { fg = fg, bold = true },
   NormalFloat = { bg = float_bg },
   -- NormalNC     { }, -- normal text in non-current windows
   FloatBorder = floatborder,
@@ -413,8 +412,10 @@ theme = {
   ['@lsp.typemod.type.declaration'] = { fg = def_fg },
   ['@lsp.typemod.variable.declaration'] = { link = '@AlabasterVariable' },
 
+  ['@NormalBold'] = { fg = fg, bold = true },
+
   -- gitcommit
-  ['@markup.heading.gitcommit'] = { link = 'NormalBold' },
+  --['@markup.heading.gitcommit'] = { link = 'NormalBold' },
 }
 
 for group, hl in pairs(theme) do
