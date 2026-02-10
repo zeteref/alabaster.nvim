@@ -413,6 +413,9 @@ theme = {
   ['@lsp.typemod.variable.declaration'] = { link = '@AlabasterVariable' },
 
   ['@NormalBold'] = { fg = fg, bold = true },
+  ['IlluminatedWordRead'] = { bg = '#45475a' },
+  ['IlluminatedWordWrite'] = { bg = '#45475a', fg = '#5ba3d9' },
+  ['IlluminatedWordText'] = { bg = '#45475a', bold = true },
 
   -- gitcommit
   --['@markup.heading.gitcommit'] = { link = 'NormalBold' },
