@@ -66,6 +66,9 @@
 (function_declaration
   name: (dot_index_expression field: (identifier) @AlabasterDefinition) (#set! priority 130))
 
+((comment) @comment
+ (#match? @comment "^---") (#set! priority 130))
+
 
 ;; ("local"    @mykeyword (#set! priority 140))
 ;; ("function" @mykeyword (#set! priority 140))
