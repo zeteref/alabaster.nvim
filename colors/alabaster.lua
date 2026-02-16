@@ -102,7 +102,7 @@ theme = {
   -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
   MoreMsg = { fg = ansi.green, bold = 1 },
   NonText = { fg = '#696969' },
-  Normal = { bg = '#293334', fg = fg },
+  Normal = { bg = '#313131', fg = fg },
   NormalFloat = { bg = float_bg },
   -- NormalNC     { }, -- normal text in non-current windows
   FloatBorder = floatborder,
