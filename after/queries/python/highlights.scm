@@ -69,6 +69,11 @@
       (identifier) @AlabasterVariable
       (#set! priority 130))))
 
+(dictionary_comprehension
+  body: (pair
+    key: (identifier) @AlabasterVariable
+    (#set! priority 130)))
+
 ("in" @NormalBold
   (#set! priority 140))
 
