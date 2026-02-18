@@ -96,7 +96,7 @@ theme = {
   -- Substitute   { }, -- |:substitute| replacement text highlighting
   LineNr = { fg = '#5c5c5c' },
   CursorLineNr = { fg = ansi.blue, bold = 1 },
-  MatchParen = { underline = 1, sp = active },
+  MatchParen = { underline = 1, fg = ansi.red, sp = ansi.green },
   -- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
   -- MsgArea      { }, -- Area for messages and cmdline
   -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
