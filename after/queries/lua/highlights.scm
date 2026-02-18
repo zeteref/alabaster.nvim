@@ -75,6 +75,12 @@
   (#match? @comment "^---")
   (#set! priority 130))
 
+(table_constructor
+  (field
+    name: (identifier) @AlabasterDefinition
+    (#set! priority 140)
+    value: (function_definition)))
+
 ; ("local"    @mykeyword (#set! priority 140))
 ; ("function" @mykeyword (#set! priority 140))
 ; ("if"       @mykeyword (#set! priority 140))
