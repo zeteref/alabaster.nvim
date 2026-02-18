@@ -81,6 +81,9 @@
     (#set! priority 140)
     value: (function_definition)))
 
+((function_call
+  name: (identifier ) @mykeyword (#set! priority 140)  (#eq? @mykeyword "error")))
+
 ; ("local"    @mykeyword (#set! priority 140))
 ; ("function" @mykeyword (#set! priority 140))
 ; ("if"       @mykeyword (#set! priority 140))
