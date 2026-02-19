@@ -70,6 +70,9 @@ local floatborder = vim.g.alabaster_floatborder and { bg = bg, fg = '#333333' } 
   bg = float_bg,
   fg = float_bg,
 }
+float_bg = '#313131'
+floatborder = { fg = '#000000' }
+
 theme = {
   Comment = { fg = comment_fg },
   ColorColumn = { bg = '#182325' },
