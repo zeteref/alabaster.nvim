@@ -1,8 +1,7 @@
 return {
-  ['@property.json'] = { fg = '#66d9ef' },
-  --['@string.json'] = { fg = '#e6db74' },
+  ['@property.json'] = { fg = '#babbf1' },
+  ['@string.json'] = { fg = '#a6d189' },
   --['@number.json'] = { fg = '#ae81ff' },
-  ['@punctuation.delimiter.json'] = { fg = '#f92672' },
-  ['@punctuation.bracket.json'] = { fg = '#f92672' },
-  ['@key.node.json'] = { fg = '#e6db74' },
+  ['@punctuation.delimiter.json'] = { fg = '#949cbb' },
+  ['@punctuation.bracket.json'] = { fg = '#949cbb' },
 }
