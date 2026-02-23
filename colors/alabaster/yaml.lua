@@ -4,4 +4,5 @@ return {
   --['@number.yaml'] = { fg = '#ae81ff' },
   ['@punctuation.delimiter.yaml'] = { fg = '#f92672' },
   ['@punctuation.bracket.yaml'] = { fg = '#f92672' },
+  ['@key.node.yaml'] = { fg = '#e6db74' },
 }
