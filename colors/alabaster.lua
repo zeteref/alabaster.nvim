@@ -1,4 +1,5 @@
 local yaml_colors = dofile(vim.fn.stdpath('data') .. '/lazy/alabaster.nvim/colors/alabaster/yaml.lua')
+local json_colors = dofile(vim.fn.stdpath('data') .. '/lazy/alabaster.nvim/colors/alabaster/json.lua')
 
 vim.cmd('hi clear')
 if vim.fn.exists('syntax_on') == 1 then
@@ -424,6 +425,10 @@ theme = {
 }
 
 for k, v in pairs(yaml_colors) do
+  theme[k] = v
+end
+
+for k, v in pairs(json_colors) do
   theme[k] = v
 end
 
