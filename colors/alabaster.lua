@@ -1,3 +1,5 @@
+local yaml_colors = dofile(vim.fn.stdpath('data') .. '/lazy/alabaster.nvim/colors/alabaster/yaml.lua')
+
 vim.cmd('hi clear')
 if vim.fn.exists('syntax_on') == 1 then
   vim.cmd('syntax reset')
@@ -419,10 +421,11 @@ theme = {
   ['IlluminatedWordRead'] = { bg = '#45475a' },
   ['IlluminatedWordWrite'] = { bg = '#45475a', fg = '#5ba3d9' },
   ['IlluminatedWordText'] = { bg = '#45475a', bold = true },
-
-  -- gitcommit
-  --['@markup.heading.gitcommit'] = { link = 'NormalBold' },
 }
+
+for k, v in pairs(yaml_colors) do
+  theme[k] = v
+end
 
 for group, hl in pairs(theme) do
   vim.api.nvim_set_hl(0, group, hl)
