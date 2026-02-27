@@ -422,6 +422,8 @@ theme = {
   ['IlluminatedWordRead'] = { bg = '#45475a' },
   ['IlluminatedWordWrite'] = { bg = '#45475a', fg = '#5ba3d9' },
   ['IlluminatedWordText'] = { bg = '#45475a', bold = true },
+
+  ['VirtColumn'] = { fg = '#444b6a' },
 }
 
 for k, v in pairs(yaml_colors) do
