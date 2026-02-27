@@ -25,7 +25,7 @@
 
 (table_constructor
   (field
-    name: (identifier) @AlabasterString))
+    name: (identifier) @AlabasterVariable))
 
 (hash_bang_line) @AlabasterHashbang
 
@@ -61,10 +61,16 @@
 
 (table_constructor
   (field
-    name: (identifier) @AlabasterString
+    name: (identifier) @AlabasterVariable
     (#set! priority 140)) ; ← here, right after the capture
   ; Optional: exclude bracketed/quoted keys if you want
-  (#not-has-parent? @AlabasterString bracketed_field))
+  (#not-has-parent? @AlabasterVariable bracketed_field))
+
+(table_constructor
+  (field
+    name: (string
+      content: (string_content) @AlabasterVariable
+    (#set! priority 140)))) 
 
 (function_declaration
   name: (dot_index_expression
