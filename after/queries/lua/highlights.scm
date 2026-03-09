@@ -1,8 +1,9 @@
 ; vim: ft=query
 ; extends
 
-(function_declaration
+((function_declaration
   name: (identifier) @AlabasterDefinition)
+  (#set! priority 140))
 
 (assignment_statement
   (variable_list
@@ -70,7 +71,7 @@
   (field
     name: (string
       content: (string_content) @AlabasterVariable
-    (#set! priority 140)))) 
+      (#set! priority 140))))
 
 (function_declaration
   name: (dot_index_expression
@@ -87,8 +88,10 @@
     (#set! priority 140)
     value: (function_definition)))
 
-((function_call
-  name: (identifier ) @mykeyword (#set! priority 140)  (#eq? @mykeyword "error")))
+(function_call
+  name: (identifier) @mykeyword
+  (#set! priority 140)
+  (#eq? @mykeyword "error"))
 
 ; ("local"    @mykeyword (#set! priority 140))
 ; ("function" @mykeyword (#set! priority 140))
