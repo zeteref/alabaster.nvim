@@ -208,7 +208,7 @@ theme = {
   DiagnosticVirtualTextWarn = { bg = '#3F240A', fg = '#C8935D' },
   DiagnosticVirtualTextHint = { bg = '#1D2B37', fg = '#7E9CB9' },
   DiagnosticVirtualTextInfo = { bg = '#162C0B', fg = '#7BAC62' },
-  DiagnosticUnnecessary = { fg = '#555555' },
+  DiagnosticUnnecessary = { italic = true },
 
   --- Treesitter
   TSAttribute = {},
