@@ -32,7 +32,7 @@
   name: (identifier)
   parameters: (parameter_list
     (parameter_declaration
-      name: (identifier) @AlabasterVariable)
+      name: (identifier) @AlabasterVariableDeclaration)
     (#set! priority 140)))
 
 (assignment_statement
