@@ -294,6 +294,8 @@ theme = {
   ['@AlabasterConstant'] = { fg = const_fg },
   ['@AlabasterDefinition'] = { fg = def_fg, bold = false },
   ['@AlabasterVariable'] = { fg = '#5ba3d9' },
+  ['@AlabasterVariableDeclaration'] = { fg = '#e8875a' },
+  --['@AlabasterVariableDeclaration'] = { fg = '#5ba3d9', bold = true, underline = true },
   ['@AlabasterPunct'] = { fg = punct_fg },
   ['@AlabasterString'] = { fg = string_fg },
   ['@AlabasterHashbang'] = { fg = dim_comment },
@@ -420,9 +422,9 @@ theme = {
   ['@lsp.typemod.variable.declaration'] = { link = '@AlabasterVariableDeclaration' },
 
   ['@NormalBold'] = { fg = fg, bold = true },
-  ['IlluminatedWordRead'] = { bg = '#45475a' },
-  ['IlluminatedWordWrite'] = { bg = '#45475a', fg = '#5ba3d9' },
-  ['IlluminatedWordText'] = { bg = '#45475a', bold = true },
+  ['IlluminatedWordRead'] = { bg = '#6a6c7b' },
+  ['IlluminatedWordWrite'] = { bg = '#6a6c7b', fg = '#5ba3d9' },
+  ['IlluminatedWordText'] = { bg = '#6a6c7b', bold = true },
 
   ['VirtColumn'] = { fg = '#444b6a' },
 }
