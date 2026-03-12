@@ -43,7 +43,7 @@
 (for_statement
   (range_clause
     left: (expression_list
-      (identifier) @AlabasterVariable
+      (identifier) @AlabasterVariableDeclaration
       (#set! priority 140))))
 
 (short_var_declaration
