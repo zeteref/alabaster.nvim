@@ -417,7 +417,7 @@ theme = {
   ['@lsp.typemod.selfKeyword'] = { fg = fg },
   ['@lsp.typemod.struct.declaration'] = { fg = def_fg },
   ['@lsp.typemod.type.declaration'] = { fg = def_fg },
-  ['@lsp.typemod.variable.declaration'] = { link = '@AlabasterVariable' },
+  ['@lsp.typemod.variable.declaration'] = { link = '@AlabasterVariableDeclaration' },
 
   ['@NormalBold'] = { fg = fg, bold = true },
   ['IlluminatedWordRead'] = { bg = '#45475a' },

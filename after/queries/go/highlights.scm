@@ -6,7 +6,7 @@
 
 (const_declaration
   (const_spec
-    name: (identifier) @AlabasterDefinition))
+    name: (identifier) @AlabasterVariableDeclaration))
 
 (function_declaration
   name: (identifier) @AlabasterDefinition)
@@ -48,23 +48,23 @@
 
 (short_var_declaration
   left: (expression_list
-    (identifier) @AlabasterVariable
+    (identifier) @AlabasterVariableDeclaration
     (#set! priority 140)))
 
 (var_declaration
   (var_spec
-    name: (identifier) @AlabasterVariable
+    name: (identifier) @AlabasterVariableDeclaration
     (#set! priority 140)))
 
 (var_declaration
   (var_spec_list
     (var_spec
-      name: (identifier) @AlabasterVariable
+      name: (identifier) @AlabasterVariableDeclaration
       (#set! priority 140))))
 
 (const_declaration
   (const_spec
-    name: (identifier) @AlabasterVariable
+    name: (identifier) @AlabasterVariableDeclaration
     (#set! priority 140)))
 
 (assignment_statement

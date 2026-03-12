@@ -39,8 +39,14 @@
 ; Highlight variable names in local declarations (with or without assignment)
 (variable_declaration
   (variable_list
-    name: (identifier) @AlabasterVariable)
+    name: (identifier) @AlabasterVariableDeclaration)
   (#set! priority 130))
+
+(variable_declaration
+  (assignment_statement
+    (variable_list
+      name: (identifier) @AlabasterVariableDeclaration
+      (#set! priority 130))))
 
 ; Highlight function parameters
 (function_definition
