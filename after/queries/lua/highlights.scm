@@ -56,7 +56,7 @@
 
 (function_declaration
   (parameters
-    (identifier) @AlabasterVariableDeclaration)
+    (identifier) @AlabasterVariable)
   (#set! priority 130))
 
 ; This query tries to catch ALL strings and give them higher priority (110) than the default (100) so they use @AlabasterString (green) instead of being overridden by the @string.regexp.lua → Special link.
