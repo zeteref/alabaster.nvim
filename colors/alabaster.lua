@@ -294,6 +294,7 @@ theme = {
   ['@AlabasterBase'] = { fg = ansi.white },
   ['@AlabasterConstant'] = { fg = const_fg },
   ['@AlabasterDefinition'] = { fg = def_fg, bold = false },
+  ['@AlabasterLambdaDefinition'] = { fg = def_fg, bold = true },
   ['@AlabasterVariable'] = { fg = '#5ba3d9' },
   ['@AlabasterVariableDeclaration'] = { fg = '#e8875a' },
   --['@AlabasterVariableDeclaration'] = { fg = '#5ba3d9', bold = true, underline = true },

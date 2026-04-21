@@ -60,6 +60,12 @@ args: (sequence_arguments
     .
     (#set! priority 140)))
 
+(fn_form
+  (#set! priority 140)
+  call: (symbol) @AlabasterLambdaDefinition
+  .
+  args: (sequence_arguments))
+
 ; ((program . (hashfn) @AlabasterHashbang)
 ;  (#match? @AlabasterHashbang "^#!/")
 ;  (#set! "priority" 101))
