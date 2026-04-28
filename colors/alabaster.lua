@@ -111,7 +111,7 @@ theme = {
   MoreMsg = { fg = ansi.green, bold = 1 },
   NonText = { fg = '#696969' },
   Normal = { bg = '#313131', fg = fg },
-  NormalFloat = { bg = float_bg },
+  NormalFloat = { bg = '#000000' },
   -- NormalNC     { }, -- normal text in non-current windows
   FloatBorder = floatborder,
   Pmenu = { bg = pmenu_bg },
